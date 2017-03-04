@@ -1,0 +1,17 @@
+<!-- begin error -->
+<div class="error" ng-controller="errorController">
+
+    <div class="error-code m-b-10"><br>
+	    {{$state.current.data.pageTitle}} <div class='fa fa-{{$state.current.data.pageIcon}}'></div></div>
+    <div class="error-content">
+        <div class="error-message">{{$state.current.data.pageShCont}}</div>
+        <div class="error-desc m-b-20">
+            This is {{$state.current.data.agencyTitle}} {{$state.current.data.appTitle}} error description text.</div>
+        <div>
+	        <img src="assets/img/dhs_logo.png" alt="dhs_logo" width="190" height="30" class="m-t-40 m-b-40"/><br>
+            <a ui-sref="app.dashboard.dashboard" class="btn btn-success">Go Back to Home Page</a>
+
+        </div>
+    </div>
+</div>
+<!-- end error -->

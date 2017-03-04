@@ -1,0 +1,198 @@
+<!-- end page controler -->
+<div ng-controller="DHSDashboardController"  ng-model="$stateProvider">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+	    <li><a href='{{$state.current.data.agencyURL}}'>{{$state.current.data.agencyTitle}} Intranet Home</a></li>
+        <li><a ui-sref="app.dashboard.dashboard">{{$state.current.data.appShTitle}} Home</a></li>
+        <li class="active">{{$state.current.data.pageTitle}}</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header"><div class='fa fa-{{$state.current.data.pageIcon}} text-{{$state.current.data.pageIconColor}}'></div> {FName}, {{$state.current.data.pageTitle}}<small></small></h1>
+    <!-- end page-header -->
+
+<!-- ======= row 1 ===================================================================== --->
+<div class="row">
+	<!-- widget 1 ---->
+    <div class="col-md-2">
+		<div class="widget widget-stats bg-blue">
+            <div class="stats-icon"><i class="fa fa-building"></i></div>
+                <div class="stats-info">
+                    <h4>Other</h4>
+                    <span class="stats-number">62</span> 19.6% <i class="fa fa-level-up"></i>
+                </div>
+                <div class="stats-link">
+                    <a href="javascript:;">View Detail <i class="fa fa-arrow-circle-o-right"></i></a>
+                </div>
+        </div>
+    </div>
+    <!-- ./widget 1 -->
+    <!-- widget 2 ---->
+    <div class="col-md-2">
+		<div class="widget widget-stats bg-purple">
+            <div class="stats-icon"><i class="fa fa-building"></i></div>
+                <div class="stats-info">
+                    <h4>Maintenance</h4>
+                    <span class="stats-number">97</span> 30.7% <i class="fa fa-level-down"></i>
+                </div>
+                <div class="stats-link">
+                    <a href="javascript:;">View Detail <i class="fa fa-arrow-circle-o-right"></i></a>
+                </div>
+        </div>
+    </div>
+    <!-- ./widget 2 -->
+    <!-- widget 3 ---->
+    <div class="col-md-2">
+		<div class="widget widget-stats bg-orange">
+            <div class="stats-icon"><i class="fa fa-building"></i></div>
+                <div class="stats-info">
+                    <h4>Under Repair</h4>
+                    <span class="stats-number">43</span> 13.6% <i class="fa fa-level-down"></i>
+                </div>
+                <div class="stats-link">
+                    <a href="javascript:;">View Detail <i class="fa fa-arrow-circle-o-right"></i></a>
+                </div>
+        </div>
+    </div>
+    <!-- ./widget 3 -->
+    <!-- widget 4 ---->
+    <div class="col-md-2">
+		<div class="widget widget-stats bg-red">
+            <div class="stats-icon"><i class="fa fa-building"></i></div>
+                <div class="stats-info">
+                    <h4>Long Term Renovation</h4>
+                    <span class="stats-number">88</span> 27.8% <i class="fa fa-level-down"></i>
+                </div>
+                <div class="stats-link">
+                    <a href="javascript:;">View Detail <i class="fa fa-arrow-circle-o-right"></i></a>
+                </div>
+        </div>
+    </div>
+    <!-- ./widget 4 -->
+    <!-- widget 5 ---->
+    <div class="col-md-2">
+		<div class="widget widget-stats bg-green">
+            <div class="stats-icon"><i class="fa fa-building"></i></div>
+                <div class="stats-info">
+                    <h4>Reserve</h4>
+                    <span class="stats-number">26</span> 8.2% <i class="fa fa-level-down"></i>
+                </div>
+                <div class="stats-link">
+                    <a href="javascript:;">View Detail <i class="fa fa-arrow-circle-o-right"></i></a>
+                </div>
+        </div>
+    </div>
+    <!-- ./widget 5 -->
+    <!-- widget 6 ---->
+    <div class="col-md-2">
+		<div class="widget widget-stats bg-black">
+            <div class="stats-icon"><i class="fa fa-building"></i></div>
+                <div class="stats-info">
+                    <h4>Familes w/Children | Adult Families</h4>
+                    <span class="stats-number">16/6</span> Variance</i>
+                </div>
+                <div class="stats-link">
+                    <a href="javascript:;">View Detail <i class="fa fa-arrow-circle-o-right"></i></a>
+                </div>
+        </div>
+    </div>
+    <!-- ./widget 6 -->
+</div>
+<p></p>
+<!-- ======= row 2 ===================================================================== --->
+
+<div class="row">
+<!-- begin col-6 -->
+        <div class="col-md-4">
+            <div class="panel panel-inverse">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                    <h4 class="panel-title">Pie Chart</h4>
+                </div>
+                <div class="panel-body">
+                    <div id="nv-pie-chart" class="height-sm"></div>
+                </div>
+            </div>
+        </div>
+        <!-- end col-6 -->
+
+        <!-- begin col-6 -->
+        <div class="col-md-8">
+            <div class="panel panel-inverse">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                    <h4 class="panel-title">Stacked Area Chart</h4>
+                </div>
+                <div class="panel-body">
+                    <div id="nv-stacked-area-chart" class="height-sm"></div>
+                </div>
+            </div>
+        </div>
+        <!-- end col-6 -->
+</div>
+
+<!-- ======= row 4 ===================================================================== --->
+
+<div class="row">
+<div class="panel panel-inverse">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                    <h4 class="panel-title">DataTable - Scroller</h4>
+                </div>
+                <div class="alert alert-danger fade in">
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    Scroller is a virtual rendering plug-in for DataTables which allows large datasets to be drawn on screen every quickly. What the virtual rendering means is that only the visible portion of the table (and a bit to either side to make the scrolling smooth) is drawn, while the scrolling container gives the visual impression that the whole table is visible. This is done by making use of the pagination abilities of DataTables and moving the table around in the scrolling container DataTables adds to the page. The scrolling container is forced to the height it would be for the full table display using an extra element.<br><br>
+                    Data Source Path: <a href="data/buildings.json" target+"_blank">data/buildings.json</a>
+                </div>
+                <div class="panel-body">
+                    <table id="data-table" class="table table-striped table-bordered display nowrap" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+								<th>Building ID</th>
+								<th>Facility ID</th>
+								<th>Facility Code</th>
+								<th>Facility Type</th>
+								<th>Shelter Name</th>
+								<th>Provider Name</th>
+								<th>BIN</th>
+								<th>Primary Address</th>
+								<th>Building Name</th>
+								<th>Street Address</th>
+								<th>Borough</th>
+								<th>City</th>
+								<th>Zip Code</th>
+								<th>Tax Lot</th>
+								<th>Tax Block</th>
+								<th>Community District</th>
+								<th>Congressional District</th>
+								<th>Council District</th>
+								<th>School District</th>
+								<th>Capacity</th>
+								<th>Is Active</th>
+								<th>No. Of Active Units</th>
+								<th>City Owned</th>
+								<th>Commercial Hotel</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+</div>
+
+<!-- ======= end row 4 ===================================================================== --->
+
+</div>

@@ -1,0 +1,427 @@
+<div ng-controller="dhsStandardPageController" ng-model="$stateProvider">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+	    <li><a href='{{$state.current.data.agencyURL}}'>{{$state.current.data.agencyTitle}} Intranet Home</a></li>
+        <li><a ui-sref="app.dashboard.dashboard">{{$state.current.data.appShTitle}} Home</a></li>
+        <li class="active">{{$state.current.data.appShTitle}} {{$state.current.data.pageTitle}}</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header"><span class="label label-primary">Part Of The {{$state.current.data.agencyTitle}} UI/UX KIT</span> <div class='fa fa-{{$state.current.data.pageIcon}}'></div> {{$state.current.data.appShTitle}} {{$state.current.data.pageTitle}}<small></small></h1>
+    <!-- end page-header -->
+
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-6 -->
+        <div class="col-md-6">
+            <!-- begin panel -->
+            <div class="panel panel-dhs" data-sortable-id="table-basic-1">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title">Default Table</h4>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Username</th>
+                                <th>Email Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Robert Santore</td>
+                                <td>rsantore@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Kari Auer</td>
+                                <td>KAuer@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Eric Collazo</td>
+                                <td>ECollazo@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ijeoma Genevieve Mbamalu</td>
+                                <td>IMbamalu@dhs.nyc.gov</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- end panel -->
+            <!-- begin panel -->
+            <div class="panel panel-dhs" data-sortable-id="table-basic-2">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title">Hover Table</h4>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Username</th>
+                                <th>Email Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Robert Santore</td>
+                                <td>rsantore@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Kari Auer</td>
+                                <td>KAuer@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Eric Collazo</td>
+                                <td>ECollazo@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ijeoma Genevieve Mbamalu</td>
+                                <td>IMbamalu@dhs.nyc.gov</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- end panel -->
+            <!-- begin panel -->
+            <div class="panel panel-dhs" data-sortable-id="table-basic-3">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title">Condensed Table</h4>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Username</th>
+                                <th>Email Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Robert Santore</td>
+                                <td>rsantore@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Kari Auer</td>
+                                <td>KAuer@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Eric Collazo</td>
+                                <td>ECollazo@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ijeoma Genevieve Mbamalu</td>
+                                <td>IMbamalu@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Michael Lavacca</td>
+                                <td>MLavacca@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Nipun Malhotra</td>
+                                <td>NMalhotra@dhs.nyc.gov</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-6 -->
+        <!-- begin col-6 -->
+        <div class="col-md-6">
+            <!-- begin panel -->
+            <div class="panel panel-dhs" data-sortable-id="table-basic-4">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title">Table Striped</h4>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Username</th>
+                                <th>Email Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Robert Santore</td>
+                                <td>rsantore@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Kari Auer</td>
+                                <td>KAuer@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Eric Collazo</td>
+                                <td>ECollazo@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ijeoma Genevieve Mbamalu</td>
+                                <td>IMbamalu@dhs.nyc.gov</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- end panel -->
+            <!-- begin panel -->
+            <div class="panel panel-dhs" data-sortable-id="table-basic-5">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title">Bordered Table</h4>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Username</th>
+                                <th>Email Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Robert Santore</td>
+                                <td>rsantore@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Kari Auer</td>
+                                <td>KAuer@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Eric Collazo</td>
+                                <td>ECollazo@dhs.nyc.gov</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ijeoma Genevieve Mbamalu</td>
+                                <td>IMbamalu@dhs.nyc.gov</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- end panel -->
+            <!-- begin panel -->
+            <div class="panel panel-dhs" data-sortable-id="table-basic-6">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title">Table Row Classes</h4>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Username</th>
+                                <th>Email Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="active">
+                                <td>1</td>
+                                <td>Robert Santore</td>
+                                <td>rsantore@dhs.nyc.gov</td>
+                            </tr>
+                            <tr class="info">
+                                <td>2</td>
+                                <td>Ijeoma Genevieve Mbamalu</td>
+                                <td>IMbamalu@dhs.nyc.gov</td>
+                            </tr>
+                            <tr class="success">
+                                <td>3</td>
+                                <td>Kari Auer</td>
+                                <td>KAuer@dhs.nyc.gov</td>
+                            </tr>
+                            <tr class="warning">
+                                <td>4</td>
+                                <td>Eric Collazo</td>
+                                <td>ECollazo@dhs.nyc.gov</td>
+                            </tr>
+                            <tr class="danger">
+                                <td>5</td>
+                                <td>Michael Lavacca </td>
+                                <td>MLavacca@dhs.nyc.gov</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-6 -->
+    </div>
+    <!-- end row -->
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-12 -->
+        <div class="col-md-12">
+            <!-- begin panel -->
+            <div class="panel panel-dhs" data-sortable-id="table-basic-7">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title">Responsive Table</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                    <th>Table heading</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                    <td>Table cell</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-12 -->
+    </div>
+    <!-- end row -->
+</div>

@@ -1,0 +1,56 @@
+<!-- begin login -->
+<div class="login login-with-news-feed" ng-controller="dhsLogoutController">
+    <!-- begin news-feed -->
+    <div class="news-feed">
+        <div class="news-image">
+			<img src="assets/img/login-bg/bg-1.jpg" data-id="login-cover-image" alt="" />
+        </div>
+        <div class="news-caption">
+           <img src="assets/img/login-bg/bg-1-pitch.jpg" alt="bg-1-pitch" width="90%" height="90%" />
+        </div>
+    </div>
+    <!-- end news-feed -->
+    <!-- begin right-content -->
+    <div class="right-content">
+        <!-- begin login-header -->
+        <div class="login-header">
+            <div class="brand">
+                <img src="assets/img/dhs_logo_blue.png" alt="dhs_logo_blue" width="65%" height="65%" />
+                <small>DHS Buildings Compliance System</small>
+            </div>
+            <div class="icon">
+                <i class="fa fa-sign-in"></i>
+            </div>
+        </div>
+        <!-- end login-header -->
+        <!-- begin login-content -->
+        <div class="login-content">
+            <form method="POST" class="margin-bottom-0" ng-submit="submitForm(loginForm)" novalidate>
+                <div class="form-group m-b-15">
+                    <input type="text" class="form-control input-lg" placeholder="Email Address" />
+                </div>
+                <div class="form-group m-b-15">
+                    <input type="text" class="form-control input-lg" placeholder="Password" />
+                </div>
+                <div class="checkbox m-b-30">
+                    <label>
+                        <input type="checkbox" /> Remember Me
+                    </label>
+                </div>
+                <div class="login-buttons">
+                    <button type="submit" class="btn btn-success btn-block btn-lg">Sign me in</button>
+                </div>
+                <div class="m-t-20 m-b-40 p-b-40">
+                    Trouble Logging In? Click <a ui-sref="app.dashboard.welcome" class="text-success">here</a> for assistance.
+                </div>
+                <hr />
+                <p class="text-center text-inverse">
+                    &copy; Copyright 2016, NYC Department Of Homeless Services
+                </p>
+            </form>
+        </div>
+        <!-- end login-content -->
+    </div>
+    <!-- end right-container -->
+</div>
+<!-- end login -->

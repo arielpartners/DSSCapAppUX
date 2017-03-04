@@ -1,0 +1,32 @@
+<!-- begin coming-soon -->
+<div class="coming-soon" ng-controller="comingSoonController" ng-model="$stateProvider">
+    <div class="coming-soon-header">
+        <div class="bg-cover"></div>
+        <div class="brand">
+            <img src="../assets/img/dhs_logo.png" alt="dhs_logo" width="190" height="30" /><br>{{$state.current.data.appTitle}} {{$state.current.data.pageTitle}} </div>
+        <div class="timer">
+            <div id="timer"></div>
+        </div>
+        <div class="desc">
+            We can place some text here about the app, the Dev or UAT url and/or contacts <br />related to this {{$state.current.data.agencyTitle}} app.
+        </div>
+    </div>
+    <div class="coming-soon-content">
+        <div class="desc">
+            We are launching a closed <b>beta</b> soon!<br /> Sign up to try it before others and be the first to know when we <b>launch</b>.
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Email Address" />
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-success">Notify Me</button>
+            </div>
+        </div>
+        <p class="help-block m-b-25"><i>We don't spam. Your email address is secure with us.</i></p>
+        <p>
+            Follow us on
+            <a href="#"><i class="fa fa-twitter fa-fw"></i> Twitter</a> and
+            <a href="#"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
+        </p>
+    </div>
+</div>
+<!-- end coming-soon -->

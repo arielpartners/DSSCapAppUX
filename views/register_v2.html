@@ -1,0 +1,77 @@
+<!-- begin register -->
+<div class="register register-with-news-feed" ng-controller="registerV3Controller" ng-model="$stateProvider">
+    <!-- begin news-feed -->
+    <div class="news-feed">
+        <div class="news-image">
+            <img src="assets/img/login-bg/bg-1.jpg" alt="" />
+        </div>
+        <div class="news-caption">
+            <h4 class="caption-title"><div class='fa fa-{{$state.current.data.pageIcon}} text-{{$state.current.data.pageIconColor}}'></div> Announcing the {{$state.current.data.agencyTitle}} {{$state.current.data.appTitle}} application</h4>
+            <p>
+                This is text that describes the app and explains what it is....
+            </p>
+        </div>
+    </div>
+    <!-- end news-feed -->
+    <!-- begin right-content -->
+    <div class="right-content">
+        <!-- begin register-header -->
+        <h1 class="register-header">
+	        <img src="assets/img/dhs_logo_blue.png" alt="dhs_logo_blue" width="65%" height="65%" /><br>
+            Sign Up
+            <small>Create your {{$state.current.data.agencyTitle}} {{$state.current.data.appTitle}}({{$state.current.data.appShTitle}}) Account.</small>
+        </h1>
+        <!-- end register-header -->
+        <!-- begin register-content -->
+        <div class="register-content">
+            <form method="POST" class="margin-bottom-0" ng-submit="submitForm(loginForm)" novalidate>
+                <label class="control-label">Name</label>
+                <div class="row row-space-10">
+                    <div class="col-md-6 m-b-15">
+                        <input type="text" class="form-control" placeholder="First name" />
+                    </div>
+                    <div class="col-md-6 m-b-15">
+                        <input type="text" class="form-control" placeholder="Last name" />
+                    </div>
+                </div>
+                <label class="control-label">Email</label>
+                <div class="row m-b-15">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" placeholder="Email address" />
+                    </div>
+                </div>
+                <label class="control-label">Re-enter Email</label>
+                <div class="row m-b-15">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" placeholder="Re-enter email address" />
+                    </div>
+                </div>
+                <label class="control-label">Password</label>
+                <div class="row m-b-15">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" placeholder="Password" />
+                    </div>
+                </div>
+
+                <div class="checkbox m-b-30">
+                    <label>
+                        <input type="checkbox" /> By clicking Sign Up, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Data Policy</a>, including our <a href="#">Cookie Use</a>.
+                    </label>
+                </div>
+                <div class="register-buttons">
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
+                </div>
+                <div class="m-t-20 m-b-40 p-b-40">
+                    Already a have a ({{$state.current.data.appShTitle}}) Account? Click <a ui-sref="user.login.logout">here</a> to login.
+                </div>
+                <hr />
+                <p class="text-center text-inverse">
+                    &copy; DHS All Right Reserved 2015
+                </p>
+            </form>
+        </div>
+        <!-- end register-content -->
+    </div>
+    <!-- end right-content -->
+</div>
+<!-- end register -->

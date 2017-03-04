@@ -1,0 +1,418 @@
+<!-- end page controler -->
+<div ng-controller="dhsStandardBuildingController" ng-model="$stateProvider">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+	    <li><a href='{{$state.current.data.agencyURL}}'>{{$state.current.data.agencyTitle}} Intranet Home</a></li>
+        <li><a ui-sref="app.dashboard.dashboard">{{$state.current.data.appShTitle}} Home</a></li>
+        <li class="active">{{$state.current.data.buildingName}} | BIN:{{$state.current.data.BIN}}</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header"><div class='fa fa-{{$state.current.data.pageIcon}} text-{{$state.current.data.pageIconColor}}'></div> {{$state.current.data.appShTitle}} {{$state.current.data.pageTitle}}: {{$state.current.data.buildingName}} | BIN:{{$state.current.data.BIN}}<small></small></h1>
+    <!-- end page-header -->
+
+<!-- begin row 1 ==================================== -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-dhs">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                    <!-- panel title -->
+                    <h4 class="panel-title"><div class='fa fa-{{$state.current.data.pageIcon}} text-{{$state.current.data.pageIconColor}}'></div> {{$state.current.data.pageTitle}}: {{$state.current.data.buildingName}} | BIN:{{$state.current.data.BIN}} | {{$state.current.data.buildingAddress}}, {{$state.current.data.buildingBourough}} {{$state.current.data.buildingZip}}</span></h4>
+                    <!-- ./end panel title -->
+                </div>
+                <div class="panel-body">
+				<!-- begin panel content -->
+				<div class="row">
+					<!-- begin col-1 -->
+						<div class="col-sm-4">
+							<b>Building Name:</b> {{$state.current.data.buildingName}} </br>
+							<b>Building Ownership:</b> <a href="javascript:;">{{$state.current.data.buildingOwnership}}</a> </br>
+							<b>Provider Name:</b> <a href="javascript:;">{{$state.current.data.providerName}}</a> </br>
+							<b>Landlord:</b> <a href="javascript:;">{{$state.current.data.landlord}}</a> </br>
+							<b>Managing Agent:</b> <a href="javascript:;">{{$state.current.data.managingAgent}}</a> </br>
+							<b>Address:</b> <a ui-sref="app.shelters.map">{{$state.current.data.buildingAddress}}, {{$state.current.data.buildingBourough}} {{$state.current.data.buildingZip}}</a>
+							| <span class="badge badge-danger"><i class="fa fa-warning"></i> {{$state.current.data.violationsSevere}}</span>
+							<span class="badge badge-warning"><i class="fa fa-warning"></i> {{$state.current.data.violationsCritical}}</span>
+							<span class="badge badge-success"><i class="fa fa-warning"></i> {{$state.current.data.violationsMinor}}</span></br>
+							<b>Building Contact:</b> <a ui-sref="app.extra.profile">{{$state.current.data.buildingContactFn}} {{$state.current.data.buildingContactLn}}</a> | <i class="fa fa-phone"></i> {{$state.current.data.buildingContactPhn}} </span> </a> | <a href="mailto:{{$state.current.data.buildingContactEm}}"><i class="fa fa-envelope-o"></i> Email </span> </a></br>
+						</div>
+					<!-- end col-1 -->
+					<!-- begin col-2 -->
+						<div class="col-sm-4">
+							<b>Community District:</b> {{$state.current.data.communityDistrict}}</br>
+							<b>District:</b> {{$state.current.data.distict}}</br>
+							<b>Council District:</b> {{$state.current.data.councilDistrict}}</br>
+							<b>Congressional District:</b> {{$state.current.data.congressionalDistrict}}</br>
+							<b>BBL:</b> {{$state.current.data.BBL}}</br>
+						</div>
+					<!-- end col-2 -->
+					<!-- begin col-3 -->
+						<div class="col-sm-4">
+							<b>City Owned:</b> <span class='text-{{$state.current.data.cityOwnedC}}'>{{$state.current.data.cityOwned}}</span></br>
+							<b>Commercial Hotel:</b> <span class='text-{{$state.current.data.commercialHotelC}}'>{{$state.current.data.commercialHotel}}</span></br>
+							<b>SARA Compliant:</b> <span class='text-{{$state.current.data.SARACompliantC}}'>{{$state.current.data.SARACompliant}}</span></br>
+							<b>Active Units:</b> {{$state.current.data.buildingActiveUnits}}</br>
+							<b>DHS Occupied:</b> {{$state.current.data.buildingDHSUnits}}</br>
+
+						</div>
+					<!-- end col-3 -->
+					</div>
+					<!-- row 1.2 -->
+					<div class="row">
+						<hr>
+					<!-- begin col-12 -->
+						<div class="col-md-12">
+							<div class="alert alert-info fade in m-b-15">
+							<strong><div class='fa fa-{{$state.current.data.pageIcon}} text-{{$state.current.data.pageIconColor}}'></div> Related Buildings: </strong>
+							<!-- 1 -->
+								<span class=" m-l-5 m-r-20">
+									<div class='fa fa-{{$state.current.data.relatedBuilding1S}} text-{{$state.current.data.relatedBuilding1C}}'></div>
+										<a ui-sref="app.buildings.detail30" class='text-{{$state.current.data.relatedBuilding1C}}'>{{$state.current.data.relatedBuilding1}}, {{$state.current.data.buildingBourough}}</a>
+								</span>
+							<!-- 2 -->
+								<span class=" m-l-5 m-r-20">
+									<div class='fa fa-{{$state.current.data.relatedBuilding2S}} text-{{$state.current.data.relatedBuilding2C}}'></div>
+										<a ui-sref="app.buildings.detail" class='text-{{$state.current.data.relatedBuilding2C}}'>{{$state.current.data.relatedBuilding2}}, {{$state.current.data.buildingBourough}}</a>
+								</span>
+							<!-- 3 -->
+								<span class=" m-l-5 m-r-20">
+									<div class='fa fa-{{$state.current.data.relatedBuilding3S}} text-{{$state.current.data.relatedBuilding3C}}'></div>
+										<a ui-sref="app.buildings.detail60" class='text-{{$state.current.data.relatedBuilding3C}}'>{{$state.current.data.relatedBuilding3}}, {{$state.current.data.buildingBourough}}</a>
+								</span>
+							<!-- 4 -->
+								<span class=" m-l-5 m-r-20">
+									<div class='fa fa-{{$state.current.data.relatedBuilding4S}} text-{{$state.current.data.relatedBuilding4C}}'></div>
+										<a ui-sref="app.buildings.detail26" class='text-{{$state.current.data.relatedBuilding4C}}'>{{$state.current.data.relatedBuilding4}}, {{$state.current.data.buildingBourough}}</a>
+								</span>
+							<!-- 5 -->
+								<span class=" m-l-5 m-r-20">
+									<div class='fa fa-{{$state.current.data.relatedBuilding5S}} text-{{$state.current.data.relatedBuilding5C}}'></div>
+										<a ui-sref="app.buildings.detail24" class='text-{{$state.current.data.relatedBuilding5C}}'>{{$state.current.data.relatedBuilding5}}, {{$state.current.data.buildingBourough}}</a>
+								</span>
+								<div class="btn-group pull-right">
+									<button type="button" class="btn btn-primary btn-xs">Related Options</button>
+										<button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
+										<span class="caret"></span>
+									</button>
+										<ul class="dropdown-menu" role="menu">
+											<li><a href="./#/app/shelters/shelters/detail">View Related Shelters</a></li>
+											<li><a href="javascript:;">View Related Contacts</a></li>
+											<li><a href="javascript:;">View Related Violations</a></li>
+                        				</ul>
+                    			</div>
+                    		</div>
+						</div>
+					<!-- end col-12 -->
+					</div>
+					<!-- ./row 1.2 -->
+					<!-- Row 1.3 -->
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="javascript:;" data-target="#default-tab-1" data-toggle="tab"><i class="fa fa-warning" style="color: red;"></i>  Violations (3)</a></li>
+								<li class=""><a href="javascript:;" data-target="#default-tab-2" data-toggle="tab"><i class="fa fa-frown-o"></i>  Complaints ( )</a></li>
+								<li class=""><a href="javascript:;" data-target="#default-tab-3" data-toggle="tab"><i class="fa fa-calendar"></i>  Inspections ( )</a></li>
+								<li class=""><a href="javascript:;" data-target="#default-tab-4" data-toggle="tab"><i class="fa fa-list-alt"></i>  Work Orders</a></li>
+								<li class=""><a href="javascript:;" data-target="#default-tab-5" data-toggle="tab"><i class="fa fa-thumbs-o-up"></i>  Compliance ( )</a></li>
+								<li class=""><a href="javascript:;" data-target="#default-tab-6" data-toggle="tab"><i class="fa fa-users"></i>  Contacts (4)</a></li>
+								<li class=""><a href="javascript:;" data-target="#default-tab-7" data-toggle="tab"><i class="fa fa-map-marker"></i>  Map</a></li>
+            				</ul>
+							<!-- tab content -->
+							<div class="tab-content">
+								<div class="tab-pane fade active in" id="default-tab-1">
+									<p>
+										<div class="btn-group m-r-5 m-b-5 btn-xs pull-right">
+											<a href="javascript:;" data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-sm"><i class="fa fa-th"></i></a>
+												<ul class="dropdown-menu">
+													<li><a href="javascript:;"><input type="checkbox"  checked="true"/> VID</a></li>
+													<li><a href="javascript:;"><input type="checkbox"  checked="true"/> Source</a></li>
+													<li><a href="javascript:;"><input type="checkbox"  checked="true"/> Address</a></li>
+													<li><a href="javascript:;"><input type="checkbox"  checked="true"/> Severity</a></li>
+													<li><a href="javascript:;"><input type="checkbox"  checked="true"/> Type</a></li>
+													<li><a href="javascript:;"><input type="checkbox"  checked="true"/> Status</a></li>
+													<li><a href="javascript:;"><input type="checkbox"  checked="true"/> Creation Date</a></li>
+													<li><a href="javascript:;"><input type="checkbox"  checked="true"/> Assigned</a></li>
+													<li><a href="javascript:;"><input type="checkbox"  checked="true"/> Description</a></li>
+													<li><a href="javascript:;"><input type="checkbox"  checked="true"/> Severity</a></li>
+													<li><a href="javascript:;"><input type="checkbox"  checked="true"/> Work Order</a></li>
+                        						</ul>
+                    					</div>
+										<table id="data-table" class="table table-striped table-bordered" name="table1">
+											<thead>
+												<tr>
+													<th width="30px" nowrap class="text-center">VID</th>
+													<th nowrap="">Source</th>
+													<th nowrap >Address</th>
+													<th class="text-center">Severity</th>
+													<th nowrap="nowrap">Type</th>
+													<th>Status</th>
+													<th class="text-center">Creation Date</th>
+													<th class="text-center">Closed Date</th>
+													<th>Assigned</th>
+													<th class="text-center">Description</th>
+													<th class="text-center">Work Order</th>
+													<th width="30px" nowrap class="text-center">Actions</th>
+        										</tr>
+      										</thead>
+	  										<tbody>
+	  											<tr class="odd gradeX">
+	  												<td class="text-center">1</td>
+	  												<td nowrap="nowrap">Site Comply</td>
+	  												<td nowrap="nowrap">33 Beaver Street, 10004 Manhattan</td>
+	  												<td class="text-center"><span class="badge badge-danger">Critical</span></td>
+	  												<td nowrap="nowrap">Elevator</td>
+	  												<td><span class="badge badge-success">Active</span></td>
+	  												<td>11/15/2015</td>
+	  												<td></td>
+	  												<td><span class="badge badge-danger">No</span></td>
+	  												<td class="text-center"><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="BQ9/34A/50A/50B FEDERAL FTSM BOILER 100HP LP STEAM SN6825 OIL 1991 BQ9(27-147)REFERENCED BOILER INSTALLED ON AN EXPIRED BL WORK TYPE PERMITAND THE UNIT WAS NEVER CERTIFIED FIRE NEW APPLICATION AND OBTAIN"><i class="fa fa-eye"></i> View Notes</button></td>
+	  												<td class="text-center"><a href="#" target="_blank"><i class="fa fa-file-word-o fa-2x"></i></a></td>
+	  												<td>
+	  													<div class="btn-group m-r-5 m-b-5">
+	  														<a href="javascript:;" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Action <span class="caret"></span></a>
+	  															<ul class="dropdown-menu dropdown-menu-right">
+	  															<li><a href="./#/app/reports/violations/vdetail2001937"><i class="fa fa-eye"></i> View </a></li>
+	  															<li class="divider"></li>
+	  															<li><a href="./#/app/extra/timeline"><i class="fa fa-eye"></i> Timeline</a></li>
+	  															<li><a href="javascript:;"><i class="fa fa-eye"></i> View Related TBD 2</a></li>
+	  															<li><a href="javascript:;"><i class="fa fa-eye"></i> View Related TBD 3</a></li>
+	  															<li><a href="javascript:;"><i class="fa fa-eye"></i> View Related TBD 3</a></li>
+	  															<li class="divider"></li>
+	  															<li><a href="javascript:;"><i class="fa fa-edit "></i> Edit</a></li>
+	  															<li><a href="javascript:;"><i class="fa fa-ban text-danger"></i> Delete</a></li>
+                												</ul>
+              											</div>
+          											</td>
+        										</tr>
+												<tr class="odd gradeX">
+													<td class="text-center">2</td>
+													<td nowrap="nowrap">Site Comply</td>
+													<td nowrap="nowrap">33 Beaver Street, 10004 Manhattan</td>
+													<td class="text-center"><span class="badge badge-warning">Severe</span></td>
+													<td nowrap="nowrap">Boiler</td>
+													<td><span class="badge badge-success">Active</span></td>
+													<td>01/22/2016</td>
+													<td></td>
+													<td><span class="badge badge-success">Yes</span></td>
+													<td class="text-center"><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="BQ9/34A/50A/50B FEDERAL FTSM BOILER 100HP LP STEAM SN6825 OIL 1991 BQ9(27-147)REFERENCED BOILER INSTALLED ON AN EXPIRED BL WORK TYPE PERMITAND THE UNIT WAS NEVER CERTIFIED FIRE NEW APPLICATION AND OBTAINBQ9/34A/50A/50B FEDERAL FTSM BOILER 100HP LP STEAM SN6825 OIL 1991 BQ9(27-147)REFERENCED BOILER INSTALLED ON AN EXPIRED BL WORK TYPE PERMITAND THE UNIT WAS NEVER CERTIFIED FIRE NEW APPLICATION AND OBTAIN"><i class="fa fa-eye"></i> View Notes</button></td>
+													<td class="text-center"><a href="#" target="_blank"><i class="fa fa-file-pdf-o fa-2x"></i></a></td>
+													<td>
+														<div class="btn-group m-r-5 m-b-5">
+															<a href="javascript:;" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Action <span class="caret"></span></a>
+																<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="violation_detail.php?VID=2"><i class="fa fa-eye"></i> View </a></li>
+																<li class="divider"></li>
+																<li><a href="javascript:;"><i class="fa fa-eye"></i> View Related TBD 1</a></li>
+																<li><a href="javascript:;"><i class="fa fa-eye"></i> View Related TBD 2</a></li>
+																<li><a href="javascript:;"><i class="fa fa-eye"></i> View Related TBD 3</a></li>
+																<li><a href="javascript:;"><i class="fa fa-eye"></i> View Related TBD 3</a></li>
+																<li class="divider"></li>
+																<li><a href="javascript:;"><i class="fa fa-edit "></i> Edit</a></li>
+																<li><a href="javascript:;"><i class="fa fa-ban text-danger"></i> Delete</a></li>
+																</ul>
+              											</div>
+          											</td>
+        										</tr>
+												<tr class="odd gradeX">
+													<td class="text-center">3</td>
+													<td nowrap="nowrap">Site Comply</td>
+													<td nowrap="nowrap">33 Beaver Street, 10004 Manhattan</td>
+													<td class="text-center"><span class="badge badge-success">Minor</span></td>
+													<td nowrap="nowrap">Recycling Containers</td>
+													<td><span class="badge badge-primary">Closed</span></td>
+													<td>01/22/2016</td>
+													<td>01/28/2016</td>
+													<td><span class="badge badge-success">Yes</span></td>
+													<td class="text-center"><button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="BQ9/34A/50A/50B FEDERAL FTSM BOILER 100HP LP STEAM SN6825 OIL 1991 BQ9(27-147)REFERENCED BOILER INSTALLED ON AN EXPIRED BL WORK TYPE PERMITAND THE UNIT WAS NEVER CERTIFIED FIRE NEW APPLICATION AND OBTAINBQ9/34A/50A/50B FEDERAL FTSM BOILER 100HP LP STEAM SN6825 OIL 1991 BQ9(27-147)REFERENCED BOILER INSTALLED ON AN EXPIRED BL WORK TYPE PERMITAND THE UNIT WAS NEVER CERTIFIED FIRE NEW APPLICATION AND OBTAIN"><i class="fa fa-eye"></i> View Notes</button></td>
+													<td class="text-center"><a href="#" target="_blank"><i class="fa fa-file-excel-o fa-2x"></i></a></td>
+													<td>
+														<div class="btn-group m-r-5 m-b-5">
+															<a href="javascript:;" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Action <span class="caret"></span></a>
+																<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="violation_detail.php?VID=3"><i class="fa fa-eye"></i> View </a></li>
+																<li class="divider"></li>
+																<li><a href="javascript:;"><i class="fa fa-eye"></i> View Related TBD 1</a></li>
+																<li><a href="javascript:;"><i class="fa fa-eye"></i> View Related TBD 2</a></li>
+																<li><a href="javascript:;"><i class="fa fa-eye"></i> View Related TBD 3</a></li>
+																<li><a href="javascript:;"><i class="fa fa-eye"></i> View Related TBD 3</a></li>
+																<li class="divider"></li>
+																<li><a href="javascript:;"><i class="fa fa-edit "></i> Edit</a></li>
+																<li><a href="javascript:;"><i class="fa fa-ban text-danger"></i> Delete</a></li>
+                												</ul>
+              											</div>
+          											</td>
+        										</tr>
+            								</tbody>
+  										</table>
+                    				</p>
+                				</div>
+								<div class="tab-pane fade" id="default-tab-2">
+									<h3 class="m-t-10"><i class="fa fa-frown-o" style="color: rgba(255, 196, 0, 1);"></i>  Complaints ( )</h3>
+									<p>
+                    				</p>
+                				</div>
+								<div class="tab-pane fade" id="default-tab-3">
+									<h3 class="m-t-10"><i class="fa fa-list-alt"></i>  Inspections ( )</h3>
+									<p>
+                    				</p>
+                				</div>
+								<div class="tab-pane fade" id="default-tab-4">
+									<h3 class="m-t-10"><i class="fa fa-list-alt"></i>  Work Orders</h3>
+									<p>
+                    				</p>
+                				</div>
+								<div class="tab-pane fade" id="default-tab-5">
+									<h3 class="m-t-10"><i class="fa fa-thumbs-o-up" style="color: #34ba7d;"></i>  Compliance ( )</h3>
+									<p>
+                    				</p>
+                				</div>
+								<div class="tab-pane fade" id="default-tab-6">
+									<h3 class="m-t-10"><i class="fa fa-users"></i>  Contacts (4)</h3>
+
+	                    				<table class="table table-hover table-striped" name="table2">
+											<thead>
+												<tr>
+													<th>CID</th>
+													<th>Contact</th>
+													<th>Role</th>
+													<th>Facility Name</th>
+													<th>Email Address</th>
+													<th>Phone</th>
+													<th>Actions</th>
+                            					</tr>
+                        					</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>Robert Santore</td>
+													<td>Shelter Director</td>
+													<td>Beaver Street Complex</td>
+													<td><a href="mailto:rsantore@dhs.nyc.gov" target="_blank"><i class="fa fa-envelope"></i> rsantore@dhs.nyc.gov </a></td>
+													<td>(212)555-1212</td>
+													<td>
+	  													<div class="btn-group m-r-5 m-b-5">
+	  														<a href="javascript:;" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Action <span class="caret"></span></a>
+	  															<ul class="dropdown-menu dropdown-menu-right">
+	  															<li><a href="./#/app/extra/profile"><i class="fa fa-eye"></i> View </a></li>
+	  															<li class="divider"></li>
+	  															<li><a href="/#/app/violations/violations/timeline"><i class="fa fa-eye"></i> Timeline</a></li>
+	  															<li class="divider"></li>
+	  															<li><a href="./#/app/extra/profile"><i class="fa fa-edit "></i> Edit</a></li>
+	  															<li><a href="./#/app/extra/profile"><i class="fa fa-ban text-danger"></i> Delete</a></li>
+                												</ul>
+              											</div>
+          											</td>
+                            					</tr>
+												<tr>
+													<td>2</td>
+													<td>Kari Auer</td>
+													<td>Shelter Director</td>
+													<td>Beaver Street Complex</td>
+													<td><a href="mailto:KAuer@dhs.nyc.gov" target="_blank"><i class="fa fa-envelope"></i> KAuer@dhs.nyc.gov </a></td>
+													<td>(212)555-1213</td>
+													<td>
+	  													<div class="btn-group m-r-5 m-b-5">
+	  														<a href="javascript:;" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Action <span class="caret"></span></a>
+	  															<ul class="dropdown-menu dropdown-menu-right">
+	  															<li><a ui-sref="app.extra.profile"><i class="fa fa-eye"></i> View </a></li>
+	  															<li class="divider"></li>
+	  															<li><a ui-sref="app.extra.timeline"><i class="fa fa-eye"></i> Timeline</a></li>
+	  															<li class="divider"></li>
+	  															<li><a ui-sref="app.extra.profile"><i class="fa fa-edit "></i> Edit</a></li>
+	  															<li><a ui-sref="app.extra.profile"><i class="fa fa-ban text-danger"></i> Delete</a></li>
+                												</ul>
+              											</div>
+          											</td>
+                            					</tr>
+												<tr>
+													<td>3</td>
+													<td>Eric Collazo</td>
+													<td>Shelter Director</td>
+													<td>Beaver Street Complex</td>
+													<td><a href="mailto:ECollazo@dhs.nyc.gov" target="_blank"><i class="fa fa-envelope"></i> ECollazo@dhs.nyc.gov </a></td>
+													<td>(212)555-1214</td>
+													<td>
+	  													<div class="btn-group m-r-5 m-b-5">
+	  														<a href="javascript:;" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Action <span class="caret"></span></a>
+	  															<ul class="dropdown-menu dropdown-menu-right">
+	  															<li><a ui-sref="app.extra.profile"><i class="fa fa-eye"></i> View </a></li>
+	  															<li class="divider"></li>
+	  															<li><a ui-sref="app.extra.timeline"><i class="fa fa-eye"></i> Timeline</a></li>
+	  															<li class="divider"></li>
+	  															<li><a ui-sref="app.extra.profile"><i class="fa fa-edit "></i> Edit</a></li>
+	  															<li><a ui-sref="app.extra.profile"><i class="fa fa-ban text-danger"></i> Delete</a></li>
+                												</ul>
+              											</div>
+          											</td>
+                            					</tr>
+												<tr>
+													<td>4</td>
+													<td>Ijeoma Genevieve Mbamalu</td>
+													<td>Shelter Director</td>
+													<td>Beaver Street Complex</td>
+													<td><a href="IMbamalu@dhs.nyc.gov" target="_blank"><i class="fa fa-envelope"></i> IMbamalu@dhs.nyc.gov </a></td>
+													<td>(212)555-1215</td>
+													<td>
+	  													<div class="btn-group m-r-5 m-b-5">
+	  														<a href="javascript:;" data-toggle="dropdown" class="btn btn-default btn-xs dropdown-toggle">Action <span class="caret"></span></a>
+	  															<ul class="dropdown-menu dropdown-menu-right">
+	  															<li><a ui-sref="app.extra.profile"><i class="fa fa-eye"></i> View </a></li>
+	  															<li class="divider"></li>
+	  															<li><a ui-sref="app.extra.timeline"><i class="fa fa-eye"></i> Timeline</a></li>
+	  															<li class="divider"></li>
+	  															<li><a ui-sref="app.extra.profile"><i class="fa fa-edit "></i> Edit</a></li>
+	  															<li><a ui-sref="app.extra.profile"><i class="fa fa-ban text-danger"></i> Delete</a></li>
+                												</ul>
+              											</div>
+          											</td>
+                            					</tr>
+                        					</tbody>
+                    					</table>
+                				</div>
+								<div class="tab-pane fade" id="default-tab-7">
+									<h3 class="m-t-10"><i class="fa fa-map-marker"></i>  Map: 33 Beaver Street, Manhattan, 10004</h3>
+									<p>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.584304480761!2d-74.0142652483639!3d40.70515197923126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a16a90d6489%3A0x46199c588f63e4d0!2s33+Beaver+St%2C+New+York%2C+NY+10004!5e0!3m2!1sen!2sus!4v1457475856120" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    				</p>
+                				</div>
+        					</div>
+							<!-- ./tab content -->
+    					</div>
+    				</div>
+					<!-- ./Row 1.3 -->
+				<!-- ./end panel content -->
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ./end row 1 ==================================== -->
+<!-- begin row 2 ==================================== -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-dhs">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                    <!-- panel title -->
+                    <h4 class="panel-title">Drag And Drop This Panel</h4>
+                    <!-- ./end panel title -->
+                </div>
+                <div class="panel-body">
+				<!-- begin panel content -->
+				2
+				<!-- ./end panel content -->
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ./end row 2 ==================================== -->
+<!-- ./end page controler -->
+</div>
